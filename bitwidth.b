@@ -261,3 +261,5 @@ Multiply by 256 again to get 65536
 	===== END DEMO CODE =====
 
 <<  Finish at cell zero
+
+used from https://github.com/rdebath/Brainfuck
