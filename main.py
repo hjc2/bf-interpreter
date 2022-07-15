@@ -5,7 +5,7 @@ from re import I
 import argparse
 
 parser = argparse.ArgumentParser("simple_example")
-parser.add_argument("file", help="runs the file", type=str)
+parser.add_argument("file", help="file", type=str)
 args = parser.parse_args()
 print(args.file)
 
