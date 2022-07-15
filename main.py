@@ -13,6 +13,11 @@ code = "++++++++[>++++[>++>+++>+++>+<<<<-]>+>+>->>+[<]<-]>>.>---.+++++++..+++.>>
 code = "[]++++++++++[>>+>+>++++++[<<+<+++>>>-]<<<<-][#>>+<<]>[>>]<<<<[>++<[-]]>.>."
 code = ".+[.+]"
 
+
+with open('helloWorld.b') as f:
+  code = " ".join([l.rstrip("\n") for l in f]) 
+
+
 #code = str([x for x in code if x in valid])
 
 index = 0
