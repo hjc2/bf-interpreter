@@ -10,7 +10,7 @@ args = parser.parse_args()
 print(args.file)
 
 
-tape = [0] * 10
+tape = [0] * 30000
 
 with open(args.file) as f:
   code = " ".join([l.rstrip("\n") for l in f]) 
