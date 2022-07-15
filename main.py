@@ -18,7 +18,7 @@ with open(args.file) as f:
 index = 0
 instruction = 0
 
-print(tape)
+#print(tape)
 
 while instruction < len(code):
     if(code[instruction] == "+"):
@@ -73,4 +73,4 @@ while instruction < len(code):
     else:
         instruction += 1
 
-print(tape)
+#print(tape)
