@@ -2,12 +2,17 @@
 import codeop
 from multiprocessing import parent_process
 from re import I
+import argparse
+
+parser = argparse.ArgumentParser("simple_example")
+parser.add_argument("file", help="runs the file", type=str)
+args = parser.parse_args()
+print(args.file)
 
 
 tape = [0] * 10
-valid = [">", "<", ".", ",", "+", "-", "[", "]"]
 
-with open('helloWorld.b') as f:
+with open(args.file) as f:
   code = " ".join([l.rstrip("\n") for l in f]) 
 
 index = 0
@@ -52,13 +57,6 @@ while instruction < len(code):
             instruction += 1
         else:
             instruction += 1
-
-        # if(tape[index] == 0):   
-        #     while code[instruction] != "]":
-        #         instruction += 1
-        #     instruction += 1
-        # else:
-        #     instruction += 1
     
     elif(code[instruction] == "]"):
         if(tape[index] != 0):
